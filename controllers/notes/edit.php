@@ -1,8 +1,11 @@
 <?php
-$config = require('config.php');
-$db = new Database($config['database']);
 
-$heading = 'Note';
+use Core\App;
+use Core\Database;
+use Core\Response;
+
+$db = App::resolve(Database::class);
+
 $currentUserId = 1;
 
 $note = $db->query('SELECT * FROM notes where id = :id', [
@@ -15,4 +18,10 @@ if ($note['user_id'] !== $currentUserId) {
     abort(Response::FORBIDDEN);
 }
 
-require "views/note.view.php";
+view("notes/edit.view.php", [
+    'heading' => 'Edit Note',
+    'errors' => [],
+    'message' => [],
+    'note' => $note,
+]);
+
