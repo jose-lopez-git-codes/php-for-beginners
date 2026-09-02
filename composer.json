@@ -1,0 +1,27 @@
+{
+    "name": "joselg/demo",
+    "authors": [
+        {
+            "name": "Jose Manuel Lopez",
+            "email": "chepemlg@hotmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/collections": "^12.47"
+    },
+    "autoload": {
+        "psr-4": {
+            "Core\\": "Core/",
+            "Http\\": "Http/",
+            "Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "pestphp/pest": "^4.3"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}

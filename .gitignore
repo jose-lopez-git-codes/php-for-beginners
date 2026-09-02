@@ -1,0 +1,25 @@
+# Dependencies
+/vendor/
+
+# Composer
+# (composer.json and composer.lock ARE committed; only ignore local overrides)
+/auth.json
+
+# PHPUnit / Pest
+/.phpunit.cache/
+/.phpunit.result.cache
+.php-cs-fixer.cache
+
+# IDE
+/.idea/
+/.vscode/
+/.fleet/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Environment
+.env
+.env.backup
